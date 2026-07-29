@@ -1,0 +1,24 @@
+.hero { position: relative; min-height: 760px; overflow: hidden; background: #fff; }
+.blueShape { position:absolute; inset:-12% 44% -20% -10%; background: linear-gradient(135deg,#078ff2,#079cf1); border-radius: 0 45% 48% 0 / 0 46% 42% 0; }
+.hero::after { content:""; position:absolute; inset:0; pointer-events:none; opacity:.22; background-image: radial-gradient(circle at 78% 22%, #a8c3d6 1px, transparent 1.5px); background-size: 34px 34px; mask-image: linear-gradient(90deg,transparent 46%,#000); }
+.heroGrid { position:relative; z-index:2; width:min(1160px,calc(100% - 48px)); min-height:760px; margin:auto; padding:54px 0; display:grid; grid-template-columns: .82fr 1.18fr; align-items:center; }
+.heroCopy { max-width:465px; color:#fff; padding-bottom:40px; }
+.eyebrow,.kicker { display:inline-flex; align-items:center; gap:.5rem; font-size:.74rem; font-weight:900; letter-spacing:.12em; text-transform:uppercase; }
+.eyebrow::before,.kicker::before { content:""; width:24px; height:3px; border-radius:4px; background:#f7b51e; }
+.heroCopy h1 { margin:1.2rem 0 1.25rem; font-size:clamp(2.7rem,5.4vw,5rem); line-height:.96; letter-spacing:-.065em; max-width:620px; }
+.heroCopy p { max-width:440px; line-height:1.75; color:rgba(255,255,255,.9); font-size:1rem; }
+.cta { display:inline-flex; gap:2rem; align-items:center; margin-top:1.5rem; background:#fff; color:#087fcf; border-radius:10px; padding:1rem 1.25rem; font-weight:800; font-size:.88rem; }
+.cta span { font-size:1.2rem; }
+.art { display:flex; justify-content:flex-end; align-items:center; min-width:0; } :global(.heroIllustration) { width:min(620px,100%); height:auto; position:relative; z-index:2; }
+.peopleSection { width:min(1160px,calc(100% - 48px)); margin:auto; padding:90px 0 70px; }
+.sectionIntro { display:flex; gap:2rem; justify-content:space-between; align-items:end; margin-bottom:2rem; }
+.kicker { color:#078ff2; } .sectionIntro h2 { margin:.7rem 0 .3rem; color:#10253a; font-size:clamp(2rem,4vw,3.4rem); letter-spacing:-.055em; } .sectionIntro p { margin:0; color:#6e8295; }
+.search { width:min(390px,100%); display:flex; align-items:center; gap:.75rem; padding:.8rem 1rem; border:1px solid #d7e7f3; border-radius:14px; background:#fff; } .search span{font-size:1.5rem;color:#078ff2}.search input{width:100%;border:0;outline:0;color:#17324a;font:inherit}.search input::placeholder{color:#92a4b4}
+.grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1rem; }
+.sentinel { height:1px; }
+.loadState { min-height:96px; display:flex; align-items:center; justify-content:center; gap:.8rem; color:#6a8092; } .loadState button{border:0;background:#078ff2;color:#fff;border-radius:10px;padding:.8rem 1.1rem;font-weight:800;cursor:pointer}.manual{opacity:1!important;background:#fff!important;color:#078ff2!important;border:1px solid #b9dff5!important}.manual:focus,.manual:hover{background:#eef8ff!important}
+.spinner { width:22px;height:22px;border:3px solid #d9edf9;border-top-color:#078ff2;border-radius:50%;animation:spin .7s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}
+.empty { margin:2rem 0; padding:2rem; border:1px dashed #b6d8ef; border-radius:20px; text-align:center; display:grid; gap:.35rem; color:#597286; }
+.about { width:min(1160px,calc(100% - 48px)); margin:0 auto 80px; border-radius:36px; background:#0b2940; color:#fff; padding:3rem; display:grid; grid-template-columns:1fr 1fr; gap:3rem; align-items:center; overflow:hidden; position:relative; }.about::after{content:"";position:absolute;width:250px;height:250px;border:55px solid #078ff2;border-radius:50%;right:-100px;top:-120px}.about span{color:#55c1b6;text-transform:uppercase;font-weight:900;font-size:.75rem;letter-spacing:.1em}.about h2{margin:.6rem 0 0;font-size:2.2rem;letter-spacing:-.05em}.about p{position:relative;z-index:1;color:#d4e5f1;line-height:1.75;margin:0}
+@media(max-width:900px){.blueShape{inset:-10% 0 35% -20%;border-radius:0 0 48% 0}.hero{min-height:auto;background:#fff}.heroGrid{grid-template-columns:1fr;padding:80px 0 40px}.heroCopy{max-width:650px}.art{justify-content:center;margin-top:20px}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.sectionIntro{align-items:stretch;flex-direction:column}.about{grid-template-columns:1fr}}
+@media(max-width:620px){.heroGrid,.peopleSection,.about{width:calc(100% - 32px)}.heroGrid{padding-top:55px}.heroCopy h1{font-size:3.1rem}.blueShape{inset:-4% -35% 42% -40%;border-radius:0 0 45% 0}.art{margin-top:55px}.grid{grid-template-columns:1fr}.peopleSection{padding-top:65px}.about{padding:2rem;border-radius:24px}}

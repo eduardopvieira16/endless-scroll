@@ -1,0 +1,12 @@
+.card {
+  position: relative; display: grid; grid-template-columns: 80px minmax(0,1fr); gap: 1rem;
+  align-items: center; min-height: 150px; padding: 1.35rem; background: #fff;
+  border: 1px solid #dceaf6; border-radius: 24px; content-visibility: auto;
+  contain-intrinsic-size: 150px; transition: transform .2s ease, border-color .2s ease;
+  &:hover { transform: translateY(-3px); border-color: #86c8f4; }
+  img { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; background: #eaf6ff; }
+}
+.copy { min-width: 0; h3 { margin: .28rem 0 .2rem; color: #10253a; font-size: 1.05rem; } p { margin: 0; color: #687b8e; font-size: .9rem; } a { display: block; margin-top: .45rem; color: #087dcf; font-size: .83rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; } }
+.status { color: #1e9c8f; font-size: .7rem; font-weight: 800; text-transform: uppercase; letter-spacing: .07em; }
+.member { position: absolute; right: 1rem; top: 1rem; color: #8ba0b3; font-size: .7rem; }
+@media (max-width: 540px) { .card { grid-template-columns: 60px minmax(0,1fr); border-radius: 20px; padding: 1rem; min-height: 126px; } .card img { width: 60px; height: 60px; } .member { display:none; } }
